@@ -1,0 +1,16 @@
+(if\s?)(.*?)(then)(.*?)((else)(!(if)))?(\.|\;|endif) vin
+
+(?s)(\sif).*?(then|\,).+?(?=else|\n)
+
+(?s)(\sif).*?(then|\,).+?(?=else|\n)|(else).+?(\n)
+(?s)((\sif).*?(then|\,).+?(?=else|\n)|(else).+?(\.))
+
+(?s)if.*?(then)
+(?s)(else).*?(\.)
+
+
+(?<=if)(.*)(?=then)
+
+(else).*?(\.)
+
+(if) (.+)\s
